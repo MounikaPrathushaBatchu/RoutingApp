@@ -11,11 +11,24 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TestService } from './test.service';
+import { HomeChild1Component } from './home-child1/home-child1.component';
+import { HomeChild2Component } from './home-child2/home-child2.component';
 
 
 const routes : Routes = [
   {
     path:'',component:HomeComponent
+  },
+  {
+    path:'home',component:HomeComponent,
+    children : [
+      {
+        path:'homechild1',component:HomeChild1Component
+      },
+      {
+        path:'homechild2',component:HomeChild2Component
+      }
+    ]
   },
   {
     path:'about',component:AboutComponent
@@ -35,7 +48,9 @@ const routes : Routes = [
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeChild1Component,
+    HomeChild2Component
   ],
   imports: [
     BrowserModule,

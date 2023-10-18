@@ -9,8 +9,6 @@ import { TestService } from '../test.service';
 export class HeaderComponent {
 
   constructor(ts : TestService) { }
-
-  // ts = new TestService();
-
+  
 
 }
