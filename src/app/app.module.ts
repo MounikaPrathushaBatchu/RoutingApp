@@ -13,7 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { TestService } from './test.service';
 import { HomeChild1Component } from './home-child1/home-child1.component';
 import { HomeChild2Component } from './home-child2/home-child2.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 const routes : Routes = [
   {
@@ -21,7 +21,7 @@ const routes : Routes = [
   },
   {
     path:'home',component:HomeComponent,
-    children : [
+    children:[
       {
         path:'homechild1',component:HomeChild1Component
       },
@@ -56,7 +56,8 @@ const routes : Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

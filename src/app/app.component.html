@@ -1,3 +1,18 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<!-- <app-header></app-header>
+<router-outlet></router-outlet> -->
+<button (click)="getData()">Get</button>
+<div *ngIf="data">
+    <table border="1">
+        <tr>
+            <td><b>Id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Price</b></td>
+        </tr>
+        <tr *ngFor="let d of data">
+            <td>{{d.id}}</td>
+            <td>{{d.title}}</td>
+            <td>{{d.price}}</td>
+        </tr>
+    </table>
+</div>
 

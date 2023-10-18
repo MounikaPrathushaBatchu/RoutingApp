@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RoutingApp';
+  constructor(private http : HttpClient) {
+
+  }
+  data : any = null ;
+  getData() {
+    this.http.get('https://fakestoreapi.com/products?limit=5')
+    .subscribe((data)=>{
+      this.data = data;
+      // console.log(data);
+      
+    })
+  }
+
 }
