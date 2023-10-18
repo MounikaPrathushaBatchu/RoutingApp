@@ -13,10 +13,10 @@ export class AppComponent {
   }
   data : any = null ;
   getData() {
-    this.http.get('https://fakestoreapi.com/products?limit=5')
+    this.http.get('https://fakestoreapi.com/products')
     .subscribe((data)=>{
       this.data = data;
-      // console.log(data);
+      console.log(data);
       
     })
   }

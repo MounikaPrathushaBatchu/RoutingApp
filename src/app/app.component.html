@@ -7,11 +7,17 @@
             <td><b>Id</b></td>
             <td><b>Name</b></td>
             <td><b>Price</b></td>
+            <td><b>Category</b></td>
+            <td><b>Rate</b></td>
+            <td><b>Count</b></td>
         </tr>
         <tr *ngFor="let d of data">
             <td>{{d.id}}</td>
             <td>{{d.title}}</td>
             <td>{{d.price}}</td>
+            <td>{{d.category}}</td>
+            <td>{{d.rating.rate}}</td>
+            <td>{{d.rating.count}}</td>
         </tr>
     </table>
 </div>
