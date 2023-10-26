@@ -14,4 +14,7 @@ export class HomeComponent {
   // constructor(private ts : TestService) {  }
   // mobiles = this.ts.mobiles;
 
+  alphabets = ['A','B','C','D'];
+  numbers = [1,2,3,4,5];
+
 }
