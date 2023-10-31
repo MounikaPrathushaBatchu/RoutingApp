@@ -11,14 +11,23 @@ export class AppComponent {
   constructor(private http : HttpClient) {
 
   }
-  data : any = null ;
-  getData() {
-    this.http.get('https://fakestoreapi.com/products')
-    .subscribe((data)=>{
-      this.data = data;
-      console.log(data);
+  // data : any = null ;
+  // getData() {
+  //   this.http.get('https://fakestoreapi.com/products')
+  //   .subscribe((data)=>{
+  //     this.data = data;
+  //     console.log(data);
       
-    })
+  //   })
+  // }
+  users :any;
+  ngOnInit(){
+    // this.http.get('https://fakestoreapi.com/products').subscribe(
+    //   (data) => {
+    //     this.users = data;
+    //   }
+    // )
+    this.users = this.http.get('https://fakestoreapi.com/products')
   }
 
 }
