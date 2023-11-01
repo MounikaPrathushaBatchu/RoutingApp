@@ -30,4 +30,6 @@ export class AppComponent {
     this.users = this.http.get('https://fakestoreapi.com/products')
   }
 
+  show = true;
+
 }

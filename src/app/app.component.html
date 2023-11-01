@@ -42,5 +42,24 @@
 </table> -->
 
 <!-- custom Directive -->
-<p appCustomdir>example for Custom Directive</p>
-<div appCustomdir>cbfercgrg</div>
+<!-- <p appCustomdir>example for Custom Directive</p>
+<div appCustomdir>cbfercgrg</div> -->
+
+<!-- Custom Structural Directive -->
+<div *ngIf="!show">
+    <p>Custom Structural Directive Example</p>
+    <p>here we can write any number of lines of code</p>
+</div>
+<ng-template [ngIf]="show">
+    <p>Custom Structural Directive Example using ng-template</p>
+    <p>here we can write any number of lines of code</p>
+</ng-template>
+<!-- above both are same -->
+<div *appRngif="show">
+    <p>Custom Structural Directive Example using appRngif</p>
+    <p>here we can write any number of lines of code</p>
+</div><ng-template [appRngif]="!show">
+    <p>Custom Structural Directive Example using ng-template with appRngif</p>
+    <p>here we can write any number of lines of code</p>
+</ng-template>
+<!-- above both are same -->

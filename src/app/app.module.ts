@@ -14,7 +14,8 @@ import { TestService } from './test.service';
 import { HomeChild1Component } from './home-child1/home-child1.component';
 import { HomeChild2Component } from './home-child2/home-child2.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CustomdirDirective } from './customdir.directive'
+import { CustomdirDirective } from './customdir.directive';
+import { RngifDirective } from './rngif.directive'
 
 const routes : Routes = [
   {
@@ -52,7 +53,8 @@ const routes : Routes = [
     NotFoundComponent,
     HomeChild1Component,
     HomeChild2Component,
-    CustomdirDirective
+    CustomdirDirective,
+    RngifDirective
   ],
   imports: [
     BrowserModule,
