@@ -13,7 +13,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { TestService } from './test.service';
 import { HomeChild1Component } from './home-child1/home-child1.component';
 import { HomeChild2Component } from './home-child2/home-child2.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CustomdirDirective } from './customdir.directive'
 
 const routes : Routes = [
   {
@@ -50,7 +51,8 @@ const routes : Routes = [
     HomeComponent,
     NotFoundComponent,
     HomeChild1Component,
-    HomeChild2Component
+    HomeChild2Component,
+    CustomdirDirective
   ],
   imports: [
     BrowserModule,
