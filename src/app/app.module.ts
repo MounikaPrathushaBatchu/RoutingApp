@@ -15,7 +15,9 @@ import { HomeChild1Component } from './home-child1/home-child1.component';
 import { HomeChild2Component } from './home-child2/home-child2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomdirDirective } from './customdir.directive';
-import { RngifDirective } from './rngif.directive'
+import { RngifDirective } from './rngif.directive';
+import { TestModule } from './test/test.module';
+
 
 const routes : Routes = [
   {
@@ -61,7 +63,8 @@ const routes : Routes = [
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    TestModule
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
