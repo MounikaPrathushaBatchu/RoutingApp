@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TestService } from '../test.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { TestService } from '../test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnChanges {
 
   constructor(public ts : TestService) {  }
 
@@ -16,5 +16,13 @@ export class HomeComponent {
 
   alphabets = ['A','B','C','D'];
   numbers = [1,2,3,4,5];
+
+  @Input() childData : any;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('OnChanges called');
+    console.log(changes);
+    
+  }
 
 }

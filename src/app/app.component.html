@@ -64,4 +64,10 @@
 </ng-template> -->
 <!-- above both are same -->
 
-<app-child-test></app-child-test>
+<!-- <app-child-test></app-child-test> -->
+
+<!-- Life Cycle Hooks -->
+    <!-- ngOnChnages() -->
+        <p>This is App Component</p>
+        <input type="text" [(ngModel)]="wish">
+        <app-home  [childData]="wish"></app-home>
