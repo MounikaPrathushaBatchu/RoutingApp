@@ -31,6 +31,12 @@ export class AppComponent {
   }
 
   show = true;
-  wish = 'Hello'
+  wish = 'Hello';
+  list = ['A','B','C','D'];
+  mobile = '';
+  addList() {
+    this.list.push(this.mobile);
+    this.mobile = "";
+  }
 
 }

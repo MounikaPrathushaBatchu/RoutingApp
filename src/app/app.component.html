@@ -74,3 +74,9 @@
 
     <!-- ngOnInit() -->
         <app-home [parentData]="wish"></app-home>
+    <!-- ngDocheck() -->
+        <div>
+            Mobiles : <input type="text" [(ngModel)]="mobile">
+            <button (click)="addList()">Add</button>
+        </div>
+        <app-home [mobiles]="list"></app-home>

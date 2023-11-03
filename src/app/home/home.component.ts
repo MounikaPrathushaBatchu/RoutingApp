@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { TestService } from '../test.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { TestService } from '../test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnChanges,OnInit {
+export class HomeComponent implements OnChanges,OnInit,DoCheck {
 
   constructor(public ts : TestService) {  }
 
@@ -19,6 +19,7 @@ export class HomeComponent implements OnChanges,OnInit {
 
   @Input() childData : any;
   @Input() parentData = '';
+  @Input() mobiles : any;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('OnChanges called');
@@ -26,7 +27,9 @@ export class HomeComponent implements OnChanges,OnInit {
   }
   ngOnInit(): void {
     console.log(this.parentData);
-    
+  }
+  ngDoCheck(): void {
+    console.log("ngDoCkeck called");    
   }
 
 }

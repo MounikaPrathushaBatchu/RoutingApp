@@ -1,5 +1,20 @@
 <p>home Component works!</p>
+<!-- ngOnChnages() -->
 {{childData}}
+<!-- ngOnInit() -->
+{{parentData}}
+<!-- ngDocheck() -->
+{{mobiles}}
+<!-- <ul>
+    <ng-container *ngFor="let m of mobiles">
+        <li>{{m}}</li>
+    </ng-container>
+</ul> -->
+<table>
+    <tr *ngFor="let m of mobiles">
+        <td>{{m}}</td>
+    </tr>
+</table>
 
 <!-- AM is public write like this -->
 <!-- <div *ngFor="let m of ts.mobiles">{{m}}</div> -->
