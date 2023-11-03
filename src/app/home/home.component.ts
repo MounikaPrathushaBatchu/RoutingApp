@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { TestService } from '../test.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { TestService } from '../test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnChanges,OnInit,DoCheck {
+export class HomeComponent implements OnChanges,OnInit,DoCheck,AfterViewInit,AfterViewChecked {
 
   constructor(public ts : TestService) {  }
 
@@ -20,6 +20,8 @@ export class HomeComponent implements OnChanges,OnInit,DoCheck {
   @Input() childData : any;
   @Input() parentData = '';
   @Input() mobiles : any;
+  @Input() view : any;
+  @Input() viewCkeck : any;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('OnChanges called');
@@ -31,5 +33,13 @@ export class HomeComponent implements OnChanges,OnInit,DoCheck {
   ngDoCheck(): void {
     console.log("ngDoCkeck called");    
   }
+  ngAfterViewInit(): void {
+    console.log("ngAfterViewInit is called");   
+  }
+  counter = 0;
+  ngAfterViewChecked(): void {
+    console.log("ngAfterViewChecked is called");
+  }
+
 
 }

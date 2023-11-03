@@ -74,9 +74,18 @@
 
     <!-- ngOnInit() -->
         <app-home [parentData]="wish"></app-home>
+    
     <!-- ngDocheck() -->
         <div>
             Mobiles : <input type="text" [(ngModel)]="mobile">
             <button (click)="addList()">Add</button>
         </div>
         <app-home [mobiles]="list"></app-home>
+    
+    <!-- ngAfterViewInit() -->
+        <app-home [view]="viewApp"></app-home>
+
+    <!-- ngAfterViewChecked() -->
+        <p>Count : {{counter}}</p>
+        <button (click)="updatyeCounter()">Click</button>
+        <app-home [viewCkeck]="viewChecked"></app-home>

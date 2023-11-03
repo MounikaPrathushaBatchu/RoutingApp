@@ -38,5 +38,11 @@ export class AppComponent {
     this.list.push(this.mobile);
     this.mobile = "";
   }
+  viewApp = 'ngAfterInit';
+  viewChecked = "ngAfterViewChecked";
+  counter = 0;
+  updatyeCounter() {
+    this.counter ++;
+  }
 
 }
