@@ -66,8 +66,11 @@
 
 <!-- <app-child-test></app-child-test> -->
 
+<p>This is App Component</p>
 <!-- Life Cycle Hooks -->
     <!-- ngOnChnages() -->
-        <p>This is App Component</p>
         <input type="text" [(ngModel)]="wish">
         <app-home  [childData]="wish"></app-home>
+
+    <!-- ngOnInit() -->
+        <app-home [parentData]="wish"></app-home>
