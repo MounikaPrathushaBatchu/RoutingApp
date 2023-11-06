@@ -50,5 +50,6 @@ export class AppComponent {
   }
   contentInit = 'ngAfterContentInit';
   contentChecked = 'AfterContentChecked';
+  destroy = 'destroyed'
 
 }

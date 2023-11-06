@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { TestService } from '../test.service';
 
 @Component({
@@ -6,7 +6,8 @@ import { TestService } from '../test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnChanges,OnInit,DoCheck,AfterViewInit,AfterViewChecked,AfterContentInit,AfterContentChecked {
+export class HomeComponent implements OnChanges,OnInit,DoCheck,AfterViewInit,AfterViewChecked,
+                                      AfterContentInit,AfterContentChecked,OnDestroy {
 
   constructor(public ts : TestService) {  }
 
@@ -24,6 +25,7 @@ export class HomeComponent implements OnChanges,OnInit,DoCheck,AfterViewInit,Aft
   @Input() viewCkeck : any;
   @Input() contentInit : any;
   @Input() contentChecked : any;
+  @Input() destroy : any;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('OnChanges called');
@@ -46,7 +48,10 @@ export class HomeComponent implements OnChanges,OnInit,DoCheck,AfterViewInit,Aft
     console.log("ngAfterContentInit is called");
   }
   ngAfterContentChecked(): void {
-    console.log("AfterContentChecked is called");
+    console.log("ngAfterContentChecked is called");
+  }
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy is called"); 
   }
 
 }

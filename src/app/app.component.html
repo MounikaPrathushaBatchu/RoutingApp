@@ -1,5 +1,5 @@
-<!-- <app-header></app-header>
-<router-outlet></router-outlet> -->
+<!-- <app-header></app-header> -->
+<router-outlet></router-outlet>
 <!-- <button (click)="getData()">Get</button>
 <div *ngIf="data">
     <table border="1">
@@ -69,31 +69,34 @@
 <p>This is App Component</p>
 <!-- Life Cycle Hooks -->
     <!-- ngOnChnages() -->
-        <input type="text" [(ngModel)]="wish">
-        <app-home  [childData]="wish"></app-home>
+        <!-- <input type="text" [(ngModel)]="wish">
+        <app-home  [childData]="wish"></app-home> -->
 
     <!-- ngOnInit() -->
-        <app-home [parentData]="wish"></app-home>
+        <!-- <app-home [parentData]="wish"></app-home> -->
     
     <!-- ngDocheck() -->
-        <div>
+        <!-- <div>
             Mobiles : <input type="text" [(ngModel)]="mobile">
             <button (click)="addList()">Add</button>
         </div>
-        <app-home [mobiles]="list"></app-home>
+        <app-home [mobiles]="list"></app-home> -->
     
     <!-- ngAfterViewInit() -->
-        <app-home [view]="viewApp"></app-home>
+        <!-- <app-home [view]="viewApp"></app-home> -->
 
     <!-- ngAfterViewChecked() -->
-        <p>Count : {{counter}}</p>
+        <!-- <p>Count : {{counter}}</p>
         <button (click)="updatyeCounter()">Click</button>
-        <app-home [viewCkeck]="viewChecked"></app-home>
+        <app-home [viewCkeck]="viewChecked"></app-home> -->
 
     <!-- ngAfterContentInit -->
-        <app-home [contentInit]="contentInit"></app-home>
+        <!-- <app-home [contentInit]="contentInit"></app-home> -->
 
-    <!-- AfterContentChecked -->
-    <p>Increment : {{increment}}</p>
-    <button (click)="updateIncrement()">Content Checked</button>
-        <app-home [contentChecked]="contentChecked"></app-home>
+    <!-- ngAfterContentChecked -->
+        <!-- <p>Increment : {{increment}}</p>
+        <button (click)="updateIncrement()">Content Checked</button>
+        <app-home [contentChecked]="contentChecked"></app-home> -->
+
+    <!-- ngOnDestroy -->
+    <app-home [destroy]="destroy"></app-home>
