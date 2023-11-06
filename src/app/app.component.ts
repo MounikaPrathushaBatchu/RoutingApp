@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   show = true;
-  wish = 'Hello';
+  wish = 'Hello Good Morning';
   list = ['A','B','C','D'];
   mobile = '';
   addList() {
@@ -41,8 +41,14 @@ export class AppComponent {
   viewApp = 'ngAfterInit';
   viewChecked = "ngAfterViewChecked";
   counter = 0;
+  increment = 0;
   updatyeCounter() {
     this.counter ++;
   }
+  updateIncrement() {
+    this.increment ++;
+  }
+  contentInit = 'ngAfterContentInit';
+  contentChecked = 'AfterContentChecked';
 
 }

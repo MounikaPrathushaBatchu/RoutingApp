@@ -89,3 +89,11 @@
         <p>Count : {{counter}}</p>
         <button (click)="updatyeCounter()">Click</button>
         <app-home [viewCkeck]="viewChecked"></app-home>
+
+    <!-- ngAfterContentInit -->
+        <app-home [contentInit]="contentInit"></app-home>
+
+    <!-- AfterContentChecked -->
+    <p>Increment : {{increment}}</p>
+    <button (click)="updateIncrement()">Content Checked</button>
+        <app-home [contentChecked]="contentChecked"></app-home>
