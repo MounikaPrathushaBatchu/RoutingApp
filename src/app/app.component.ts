@@ -30,26 +30,26 @@ export class AppComponent {
     this.users = this.http.get('https://fakestoreapi.com/products')
   }
 
-  show = true;
-  wish = 'Hello Good Morning';
-  list = ['A','B','C','D'];
-  mobile = '';
-  addList() {
-    this.list.push(this.mobile);
-    this.mobile = "";
-  }
-  viewApp = 'ngAfterInit';
-  viewChecked = "ngAfterViewChecked";
-  counter = 0;
-  increment = 0;
-  updatyeCounter() {
-    this.counter ++;
-  }
-  updateIncrement() {
-    this.increment ++;
-  }
-  contentInit = 'ngAfterContentInit';
-  contentChecked = 'AfterContentChecked';
-  destroy = 'destroyed'
+  // show = true;
+  // wish = 'Hello Good Morning';
+  // list = ['A','B','C','D'];
+  // mobile = '';
+  // addList() {
+  //   this.list.push(this.mobile);
+  //   this.mobile = "";
+  // }
+  // viewApp = 'ngAfterInit';
+  // viewChecked = "ngAfterViewChecked";
+  // counter = 0;
+  // increment = 0;
+  // updatyeCounter() {
+  //   this.counter ++;
+  // }
+  // updateIncrement() {
+  //   this.increment ++;
+  // }
+  // contentInit = 'ngAfterContentInit';
+  // contentChecked = 'AfterContentChecked';
+  // destroy = 'destroyed';
 
 }
